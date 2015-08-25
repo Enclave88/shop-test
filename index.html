@@ -9,10 +9,10 @@
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-  	
+  <script src="js/vendors/angular.min.js"></script>	
 	<title>Test</title>
 </head>
-<body>
+<body ng-app="ShopMagazine">
 	<header>
 		<h1>Интернет-магазин</h1>	
 	</header>
@@ -21,8 +21,8 @@
 		<span>0</span>
 	</a>
 
-	<ul class="cd-gallery">
-		<li>
+	<ul class="cd-gallery" ng-controller="MainController">
+		<li ng-repeat="book in books">
 			<div class="cd-single-item">
 				<a href="#0">
 					<ul class="cd-slider-wrapper">
@@ -45,12 +45,16 @@
 			</div> <!-- .cd-single-item -->
 
 			<div class="cd-item-info">
-				<b><a href="#0">Product Name</a></b>
-				<em>$9.99</em>
+				<b><a href="#0">{{ book.name }}</a></b>
+				<em>{{ book.price | currency }}</em>
 			</div> <!-- cd-item-info -->
 		</li>
 	</ul> <!-- cd-gallery -->
+	
+<script src="js/app.js.js"></script>
+<script src="js/controller/MainController.js"></script>
 <script src="js/jquery-2.1.4.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script>
+
 </body>
 </html>
