@@ -26,9 +26,7 @@
 			<div class="cd-single-item">
 				<a href="#0">
 					<ul class="cd-slider-wrapper">
-						<li><img src="img/thumb-1.jpg" alt="Preview image"></li>
-						<li class="selected"><img src="img/thumb-2.jpg" alt="Preview image"></li>
-						<li><img src="img/thumb-3.jpg" alt="Preview image"></li>
+						<li class="selected"><img ng-src="{{ book.cover }}"></li>
 					</ul>
 				</a>
 
@@ -47,11 +45,15 @@
 			<div class="cd-item-info">
 				<b><a href="#0">{{ book.name }}</a></b>
 				<em>{{ book.price | currency }}</em>
+				
 			</div> <!-- cd-item-info -->
+			<div class="under-cd-item-info">
+			  <p>by {{ book.author }}</p>
+			</div>
 		</li>
 	</ul> <!-- cd-gallery -->
 	
-<script src="js/app.js.js"></script>
+<script src="js/app.js"></script>
 <script src="js/controller/MainController.js"></script>
 <script src="js/jquery-2.1.4.js"></script>
 <script src="js/main.js"></script>

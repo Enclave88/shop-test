@@ -254,6 +254,8 @@ Product Slider
   width: 100%;
   display: block;
   border-radius: 4px;
+  max-height: 43rem;
+  min-height: 43rem;
 }
 
 /* -------------------------------- 
@@ -584,10 +586,19 @@ Product Info (title + price)
 .cd-item-info em {
   float: right;
   color: #5484a0;
+  padding: .5rem;
+  outline: 1px solid #5484a0;
+  border-radius: 10px;
 }
 .cd-item-info a {
   color: #314d5d;
 }
 .cd-item-info a:hover {
   text-decoration: underline;
+}
+
+.under-cd-item-info p {
+  padding: 0 .7rem;
+  font-weight: 700;
+  color: firebrick;
 }
