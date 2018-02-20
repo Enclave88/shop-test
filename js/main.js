@@ -79,13 +79,25 @@ jQuery(document).ready(function(){
 		var slider = actual.parent('.cd-customization').prev('a').children('.cd-slider-wrapper'),
 			slides = slider.children('li');
 
-		slides.eq(index).removeClass('move-left').addClass('selected').prevAll().removeClass('selected').addClass('move-left').end().nextAll().removeClass('selected move-left');
+		slides.eq(index)
+			.removeClass('move-left')
+			.addClass('selected').prevAll()
+			.removeClass('selected')
+			.addClass('move-left')
+			.end().nextAll()
+			.removeClass('selected move-left');
 	}
 
 	function resetCustomization(selectOptions) {
 		//close ul.clor/ul.size if they were left open and user is not interacting with them anymore
 		//remove the .hover class from items if user is interacting with a different one
-		selectOptions.siblings('[data-type="select"]').removeClass('is-open').end().parents('.cd-single-item').addClass('hover').parent('li').siblings('li').find('.cd-single-item').removeClass('hover').end().find('[data-type="select"]').removeClass('is-open');
+		selectOptions.siblings('[data-type="select"]')
+			.removeClass('is-open')
+			.end().parents('.cd-single-item')
+			.addClass('hover').parent('li').siblings('li').find('.cd-single-item')
+			.removeClass('hover')
+			.end().find('[data-type="select"]')
+			.removeClass('is-open');
 	}
 
 	function deactivateCustomization() {
