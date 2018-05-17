@@ -143,9 +143,9 @@ Gallery grid
     display: table;
   }
   .cd-gallery > li {
-    width: 48%;
+    width: 18rem;
     float: left;
-    margin: 0 4% 6% 0;
+    margin: 6%;
   }
   .cd-gallery > li:nth-of-type(2n) {
     margin-right: 0;
@@ -156,9 +156,9 @@ Gallery grid
     margin-top: 2.5em;
   }
   .cd-gallery > li {
-    width: 30%;
+    width: 30rem;
     float: left;
-    margin: 0 5% 5% 0;
+    margin: 2%;
   }
   .cd-gallery > li:nth-of-type(2n) {
     margin-right: 5%;
@@ -175,6 +175,7 @@ Single Item
 -------------------------------- */
 .cd-single-item {
   position: relative;
+  padding: 0 7rem;
 }
 .cd-single-item > a {
   display: block;

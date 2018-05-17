@@ -10,7 +10,8 @@
     </head>
     <body ng-app="ShopMagazine">
         <header>
-            <h1>Интернет-магазин</h1>
+            <h1>Интернет-магазин гитар (будет)</h1>
+            <h3>Закрываем книжный, открываем гитарный</h3>
         </header>
 
         <a href="#0" class="cd-cart">
@@ -42,7 +43,7 @@
 
                 <div class="cd-item-info">
                     <b><a href="#0">{{ book.name }}</a></b>
-                    <em>{{ book.price | currency }}</em>
+                    <em>{{ book.price | currency:'₽'}}</em>
 
                 </div> <!-- cd-item-info -->
                 <div class="under-cd-item-info">
